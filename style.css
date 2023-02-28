@@ -26,6 +26,9 @@ table td {
     border: 5px solid black;
     position: relative;
 }
+table td:hover{
+    background-color: rgba(181, 218, 181, 0.1);
+}
 
 tr:first-child td{
     border-top: 0;
@@ -55,4 +58,7 @@ table tr:last-child{
     mix-blend-mode: multiply;
     top:10px;
     left:10px;
+}
+.d-none{
+    display: none;
 }
