@@ -14,8 +14,6 @@ body {
 
 .table-div {
     position: relative;
-    height: 800px;
-    width: 800px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,6 +71,11 @@ table tr:last-child {
     mix-blend-mode: multiply;
     top: 10px;
     left: 10px;
+
+}
+.rotated{
+    rotate: 45deg;
+
 }
 
 .d-none {
@@ -82,13 +85,16 @@ table tr:last-child {
 .player-panel {
     display: flex;
     margin-bottom: 60px;
-
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .player-panel img {
     width: 70px;
     height: 70px;
-
+    margin: 15px;
+    
 }
 
 .player {
@@ -150,6 +156,15 @@ table tr:last-child {
     width: 162px;
     cursor: pointer;
     z-index: 3;
+}
 
-
+@media(max-width:390px){
+.player-panel{
+    text-align: center;
+    font-size: 15px;
+}
+.player{
+    margin-left: 2px;
+    margin-right: 2px;
+}
 }

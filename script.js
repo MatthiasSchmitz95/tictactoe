@@ -37,6 +37,11 @@ function player2Turn() {
 }
 function checkForWinner() {
     let winner;
+    let len = fields.filter(Boolean).length;
+    if (len ==9 && !winner) {
+        gameOverDraw();
+        
+    }
     if (fields[0] == fields[1] && fields[1] == fields[2] && fields[0]) {
         winner = fields[0];
         document.getElementById('line-0').style.transform = 'scaleX(1)';
@@ -86,14 +91,20 @@ function reload() {
     document.getElementById('btn-restart').classList.add('d-none');
     fields = [];
     gameOver = false;
+    currentShape = 'cross';
+    player2Turn();
 
     for (let i = 0; i < 8; i++) {
-        document.getElementById('line-' + i).classList.add('d-none');
+        document.getElementById('line-' + i).style.transform = ' scaleX(0)';
     }
 
     for (let i = 0; i < 9; i++) {
         document.getElementById('cross-' + i).classList.add('d-none');
         document.getElementById('circle-' + i).classList.add('d-none');
     }
+}
+
+function gameOverDraw(){
+    document.getElementById('btn-restart').classList.remove('d-none');
 
 }
